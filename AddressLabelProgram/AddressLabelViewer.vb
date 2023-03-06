@@ -1,6 +1,12 @@
 ﻿Option Explicit On
 Option Strict On
 
+'Baden Brenner
+'RECT 0265
+'Spring 2023
+'Adress Lable Program
+'https://github.com/bbre1666/AddressLabelProgram.git
+
 Imports System.IO.Compression
 
 Public Class AddressLabel
