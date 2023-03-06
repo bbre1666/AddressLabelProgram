@@ -75,20 +75,17 @@ Public Class AddressLabel
 
     Private Function Summary(Optional addRecord As Boolean = True) As String
         Static _summary As String
-        'example of output
-        'First last
-        'Street Address
-        'City State Zip code
+        'formats and displays the label 
         If addRecord Then
             _summary &= $"{FirstNameTextBox.Text} {LastNameTextBox.Text}" & vbNewLine
             _summary &= $"{StreetTextBox.Text}" & vbNewLine
-            _summary &= $"{CityTextBox.Text}" & "," & $" {StateTextBox.Text} {ZipCodeTextBox.Text}"
+            _summary &= $"{CityTextBox.Text}" & "," & $" {StateTextBox.Text}" & "," & $" {ZipCodeTextBox.Text}"
         End If
         Return _summary
     End Function
 
     Private Sub Clear()
-        'resete to dafalt 
+        'resets to dafalt 
         FirstNameTextBox.Text = ""
         LastNameTextBox.Text = ""
         StreetTextBox.Text = ""
@@ -101,7 +98,7 @@ Public Class AddressLabel
     End Sub
 
     Private Sub DisplayButton_Click(sender As Object, e As EventArgs) Handles PerviewLableButton.Click
-        'if the imput is valid thatn the lable will display
+        'if the imput is valid thatn the lable will display than clear the imput boxes 
         If ValidInput() Then
             Summary()
             Clear()
