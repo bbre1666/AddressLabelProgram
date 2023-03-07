@@ -22,6 +22,7 @@ Partial Class AddressLabel
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.FirstNameTextBox = New System.Windows.Forms.TextBox()
         Me.LastNameTextBox = New System.Windows.Forms.TextBox()
         Me.StreetTextBox = New System.Windows.Forms.TextBox()
@@ -29,20 +30,21 @@ Partial Class AddressLabel
         Me.StateTextBox = New System.Windows.Forms.TextBox()
         Me.ZipCodeTextBox = New System.Windows.Forms.TextBox()
         Me.LabelPreview = New System.Windows.Forms.GroupBox()
-        Me.NirstName = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.Label6 = New System.Windows.Forms.Label()
+        Me.FirstName = New System.Windows.Forms.Label()
+        Me.LastName = New System.Windows.Forms.Label()
+        Me.StreetName = New System.Windows.Forms.Label()
+        Me.City = New System.Windows.Forms.Label()
+        Me.State = New System.Windows.Forms.Label()
+        Me.ZipCode = New System.Windows.Forms.Label()
         Me.PerviewLableButton = New System.Windows.Forms.Button()
         Me.ClearButton = New System.Windows.Forms.Button()
         Me.ExitButton = New System.Windows.Forms.Button()
+        Me.ToolTip = New System.Windows.Forms.ToolTip(Me.components)
         Me.SuspendLayout()
         '
         'FirstNameTextBox
         '
-        Me.FirstNameTextBox.Location = New System.Drawing.Point(119, 39)
+        Me.FirstNameTextBox.Location = New System.Drawing.Point(119, 42)
         Me.FirstNameTextBox.Name = "FirstNameTextBox"
         Me.FirstNameTextBox.Size = New System.Drawing.Size(189, 27)
         Me.FirstNameTextBox.TabIndex = 0
@@ -91,59 +93,59 @@ Partial Class AddressLabel
         Me.LabelPreview.TabStop = False
         Me.LabelPreview.Text = "LabelPreview"
         '
-        'NirstName
+        'FirstName
         '
-        Me.NirstName.AutoSize = True
-        Me.NirstName.Location = New System.Drawing.Point(33, 42)
-        Me.NirstName.Name = "NirstName"
-        Me.NirstName.Size = New System.Drawing.Size(80, 20)
-        Me.NirstName.TabIndex = 7
-        Me.NirstName.Text = "Frist Name"
+        Me.FirstName.AutoSize = True
+        Me.FirstName.Location = New System.Drawing.Point(33, 42)
+        Me.FirstName.Name = "FirstName"
+        Me.FirstName.Size = New System.Drawing.Size(80, 20)
+        Me.FirstName.TabIndex = 7
+        Me.FirstName.Text = "Frist Name"
         '
-        'Label2
+        'LastName
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(33, 86)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(79, 20)
-        Me.Label2.TabIndex = 8
-        Me.Label2.Text = "Last Name"
+        Me.LastName.AutoSize = True
+        Me.LastName.Location = New System.Drawing.Point(33, 86)
+        Me.LastName.Name = "LastName"
+        Me.LastName.Size = New System.Drawing.Size(79, 20)
+        Me.LastName.TabIndex = 8
+        Me.LastName.Text = "Last Name"
         '
-        'Label3
+        'StreetName
         '
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(21, 135)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(92, 20)
-        Me.Label3.TabIndex = 9
-        Me.Label3.Text = "Street Name"
+        Me.StreetName.AutoSize = True
+        Me.StreetName.Location = New System.Drawing.Point(21, 135)
+        Me.StreetName.Name = "StreetName"
+        Me.StreetName.Size = New System.Drawing.Size(92, 20)
+        Me.StreetName.TabIndex = 9
+        Me.StreetName.Text = "Street Name"
         '
-        'Label4
+        'City
         '
-        Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(60, 183)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(34, 20)
-        Me.Label4.TabIndex = 10
-        Me.Label4.Text = "City"
+        Me.City.AutoSize = True
+        Me.City.Location = New System.Drawing.Point(60, 187)
+        Me.City.Name = "City"
+        Me.City.Size = New System.Drawing.Size(34, 20)
+        Me.City.TabIndex = 10
+        Me.City.Text = "City"
         '
-        'Label5
+        'State
         '
-        Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(60, 232)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(43, 20)
-        Me.Label5.TabIndex = 11
-        Me.Label5.Text = "State"
+        Me.State.AutoSize = True
+        Me.State.Location = New System.Drawing.Point(60, 232)
+        Me.State.Name = "State"
+        Me.State.Size = New System.Drawing.Size(43, 20)
+        Me.State.TabIndex = 11
+        Me.State.Text = "State"
         '
-        'Label6
+        'ZipCode
         '
-        Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(42, 285)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(70, 20)
-        Me.Label6.TabIndex = 12
-        Me.Label6.Text = "Zip Code"
+        Me.ZipCode.AutoSize = True
+        Me.ZipCode.Location = New System.Drawing.Point(42, 285)
+        Me.ZipCode.Name = "ZipCode"
+        Me.ZipCode.Size = New System.Drawing.Size(70, 20)
+        Me.ZipCode.TabIndex = 12
+        Me.ZipCode.Text = "Zip Code"
         '
         'PerviewLableButton
         '
@@ -176,16 +178,17 @@ Partial Class AddressLabel
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.SystemColors.Window
         Me.ClientSize = New System.Drawing.Size(800, 450)
         Me.Controls.Add(Me.ExitButton)
         Me.Controls.Add(Me.ClearButton)
         Me.Controls.Add(Me.PerviewLableButton)
-        Me.Controls.Add(Me.Label6)
-        Me.Controls.Add(Me.Label5)
-        Me.Controls.Add(Me.Label4)
-        Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.NirstName)
+        Me.Controls.Add(Me.ZipCode)
+        Me.Controls.Add(Me.State)
+        Me.Controls.Add(Me.City)
+        Me.Controls.Add(Me.StreetName)
+        Me.Controls.Add(Me.LastName)
+        Me.Controls.Add(Me.FirstName)
         Me.Controls.Add(Me.LabelPreview)
         Me.Controls.Add(Me.ZipCodeTextBox)
         Me.Controls.Add(Me.StateTextBox)
@@ -193,6 +196,7 @@ Partial Class AddressLabel
         Me.Controls.Add(Me.StreetTextBox)
         Me.Controls.Add(Me.LastNameTextBox)
         Me.Controls.Add(Me.FirstNameTextBox)
+        Me.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.Name = "AddressLabel"
         Me.Text = "AddressLabel"
         Me.ResumeLayout(False)
@@ -207,13 +211,14 @@ Partial Class AddressLabel
     Friend WithEvents StateTextBox As TextBox
     Friend WithEvents ZipCodeTextBox As TextBox
     Friend WithEvents LabelPreview As GroupBox
-    Friend WithEvents NirstName As Label
-    Friend WithEvents Label2 As Label
-    Friend WithEvents Label3 As Label
-    Friend WithEvents Label4 As Label
-    Friend WithEvents Label5 As Label
-    Friend WithEvents Label6 As Label
+    Friend WithEvents FirstName As Label
+    Friend WithEvents LastName As Label
+    Friend WithEvents StreetName As Label
+    Friend WithEvents City As Label
+    Friend WithEvents State As Label
+    Friend WithEvents ZipCode As Label
     Friend WithEvents PerviewLableButton As Button
     Friend WithEvents ClearButton As Button
     Friend WithEvents ExitButton As Button
+    Friend WithEvents ToolTip As ToolTip
 End Class

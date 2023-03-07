@@ -113,5 +113,24 @@ Public Class AddressLabel
     Private Sub ClearButton_Click(sender As Object, e As EventArgs) Handles ClearButton.Click
         Clear()
     End Sub
+
+    Private Sub AddressLabel_Load(sender As Object, e As EventArgs) Handles Me.Load
+        Dim ToolTip As New ToolTip
+
+        ToolTip.AutoPopDelay = 5000
+        ToolTip.InitialDelay = 1000
+        ToolTip.ReshowDelay = 500
+
+        ToolTip.SetToolTip(Me.FirstName, "Enter the Recipients First Name")
+        ToolTip.SetToolTip(Me.LastName, "Enter the Recipients Last Name")
+        ToolTip.SetToolTip(Me.StreetName, "Enter the Name of the Street of the Desired Address")
+        ToolTip.SetToolTip(Me.City, "Enter the Name of the City of the Desired Address")
+        ToolTip.SetToolTip(Me.State, "Enter the Name of the State of the Desired Address")
+        ToolTip.SetToolTip(Me.ZipCode, "Enter the Zip code of the Desired Address")
+        ToolTip.SetToolTip(Me.PerviewLableButton, "this will load a preview of the label")
+        ToolTip.SetToolTip(Me.ClearButton, "this will Clear all the Vlaues")
+        ToolTip.SetToolTip(Me.ExitButton, "this will Exit the window")
+        ToolTip.SetToolTip(Me.LabelPreview, "this Where the preview of the lable will load")
+    End Sub
 End Class
 
